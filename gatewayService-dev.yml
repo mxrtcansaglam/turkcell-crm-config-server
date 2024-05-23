@@ -12,6 +12,21 @@ eureka:
 spring:
   application:
     name: gatewayService
+  datasource:
+    url: jdbc:postgresql://localhost:5432/turkcellcrmcustomerdb
+    username: postgres
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      javax:
+        persistence:
+          validation:
+            mode: none
+    show-sql: true
   cloud:
     gateway:
       mvc:
