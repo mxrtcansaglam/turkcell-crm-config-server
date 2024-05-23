@@ -10,6 +10,8 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
 spring:
+  main:
+    web-application-type: reactive
   application:
     name: gatewayService
   datasource:
