@@ -15,7 +15,7 @@ spring:
   application:
     name: gatewayService
   datasource:
-    url: jdbc:postgresql://localhost:5432/turkcellcrmcustomerdb
+    url: jdbc:postgresql://localhost:5432/turkcellcrmgatewaydb
     username: postgres
     password: 12345
   jpa:
