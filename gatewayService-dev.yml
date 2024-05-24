@@ -36,13 +36,11 @@ spring:
           id: customerservice
           predicates[0]: Path=/customerservice/api/v1/individualCustomers/**
           uri: lb://CUSTOMER-SERVICE
-          filters: - JwtAuthenticationFilter
         routes[1]:
           id: discoveryserver
           predicates[0]: Path=/eureka/web
           filters[0]: SetPath=/
           uri: http://localhost:9000
-          filters: - JwtAuthenticationFilter
 jwt:
     secret:
         key: 97z1qGFYhUz9jtKaF6OTCpkJevWPnULxkF8bhRd1pMXPOkFtB0DcJMFRN12cw0ZsT4p6HA/z2NnlYMwyCTVkXIT9H09okIZpMrpNBd5b+6BMHPErJHuOj88ko2xiGvchNUaFTGueFXr5qzMzMNIZds7a4QgYMXjnK7LpRi+gJJBXiszT6MMWmfkxERim2WoZ/AFd6ol3RS7iwj2q7lhNDJJXT6JRI54kjyCULvkgGkZXNNPBchsS/Gq3Jvdz9GFasLBXw1esGQVzPEOEZhJGDE9pjCO/622ktwUQPTdLbDAw+0Wa1GrcJGigR1fS2LnDxw3+/5M9Gvf+baVb0TUwh/J7ynd9fiK6ODO3VT9xmpw=,
