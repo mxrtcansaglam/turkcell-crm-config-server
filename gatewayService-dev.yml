@@ -34,7 +34,7 @@ spring:
       mvc:
         routes[0]:
           id: customerservice
-          predicates[0]: Path=/customerservice/api/v1/individualCustomers/**
+          predicates[0]: Path=/api/v1/individualCustomers/**
           uri: lb://customerservice
         routes[1]:
           id: discoveryserver
