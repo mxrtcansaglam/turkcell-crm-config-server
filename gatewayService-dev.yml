@@ -13,7 +13,7 @@ spring:
   main:
     web-application-type: reactive
   application:
-    name: gatewayService
+    name: gatewayservice
   datasource:
     url: jdbc:postgresql://localhost:5432/turkcellcrmgatewaydb
     username: postgres
