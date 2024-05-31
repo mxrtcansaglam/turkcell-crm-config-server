@@ -11,7 +11,7 @@ server:
   port: 0
 spring:
   application:
-    name: cart-service
+    name: cartservice
   datasource:
     url: jdbc:postgresql://localhost:5432/turkcellcrmcartdb
     username: postgres
