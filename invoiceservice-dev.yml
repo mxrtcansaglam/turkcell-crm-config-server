@@ -11,7 +11,7 @@ server:
   port: 0
 spring:
   application:
-    name: invoice-service
+    name: invoiceservice
   datasource:
     url: jdbc:postgresql://localhost:5432/turkcellcrminvoicedb
     username: postgres
