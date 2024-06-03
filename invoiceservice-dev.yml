@@ -11,9 +11,9 @@ server:
   port: 0
 spring:
   application:
-    name: catalog-service
+    name: invoiceservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/turkcellcrmcatalogdb
+    url: jdbc:postgresql://localhost:5432/turkcellcrminvoicedb
     username: postgres
     password: 12345
   jpa:

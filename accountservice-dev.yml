@@ -11,9 +11,9 @@ server:
   port: 0
 spring:
   application:
-    name: order-service
+    name: accountservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/turkcellcrmorderdb
+    url: jdbc:postgresql://localhost:5432/turkcellcrmaccountdb
     username: postgres
     password: 12345
   jpa:
@@ -32,3 +32,13 @@ spring:
       bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
