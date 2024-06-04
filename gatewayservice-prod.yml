@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gatewayservice
+
+server:
+  port: 9002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://crmgatewayserver:9000/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  url: http://crmgatewayserver:9000
