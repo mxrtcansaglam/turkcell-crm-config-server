@@ -34,7 +34,6 @@ spring:
             uri: ${eureka.url}
           - id: catalogservice
             predicates:
-              - Path=/catalogservice/api/v1/products/**
               - Path=/catalogservice/api/v1/catalogs/**
             uri: lb://catalogservice
           - id: invoiceservice
