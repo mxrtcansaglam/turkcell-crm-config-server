@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://crmcatalogdbprod:5464/crmcatalogdbprod
+    url: jdbc:postgresql://crmcatalogdbprod:5432/crmcatalogdbprod
     username: admin
     password: 123456
   jpa:
