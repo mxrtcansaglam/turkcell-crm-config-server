@@ -2,16 +2,11 @@ server:
   port: 0
 
 spring:
-  datasource:
-    url: jdbc:postgresql://crmsearchdbprod:5463/crmsearchdbprod
-    username: admin
-    password: 123456
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
+  data:
+    mongodb:
+      database: crmsearchdbprod
+      host: crmsearchdbprod:27018
+      port: 27017
 
 eureka:
   client:
