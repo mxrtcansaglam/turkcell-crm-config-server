@@ -5,8 +5,8 @@ spring:
   data:
     mongodb:
       database: crmsearchdbprod
-      host: crmsearchdbprod:27018
-      port: 27017
+      host: crmsearchdbprod
+      port: 27018
 
 eureka:
   client:
