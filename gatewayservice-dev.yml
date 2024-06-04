@@ -29,9 +29,15 @@ spring:
             uri: lb://identityservice
           - id: searchservice
             predicates:
-              - Path=/searchservice/api/v1/customers/**
-              - Path=/searchservice/api/v1/products/**
               - Path=/searchservice/api/v1/catalogs/**
+            uri: lb://searchService
+          - id: searchservice
+            predicates:
+              - Path=/searchservice/api/v1/products/**
+            uri: lb://searchService
+          - id: searchservice
+            predicates:
+              - Path=/searchservice/api/v1/customers/**
             uri: lb://searchService
           - id: invoiceservice
             predicates:
