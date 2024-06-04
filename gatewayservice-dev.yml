@@ -20,7 +20,7 @@ spring:
             uri: lb://customerservice
           - id: orderservice
             predicates:
-              - Path=/api/orders/**
+              - Path=/api/v1/orders/**
             uri: lb://orderservice
           - id: discoveryserver
             predicates:
@@ -39,7 +39,7 @@ spring:
             uri: lb://catalogservice
           - id: invoiceservice
             predicates:
-              - Path=/api/accounts/**
+              - Path=/api/v1/accounts/**
             uri: lb://invoiceservice
           - id: identityservice
             predicates:
