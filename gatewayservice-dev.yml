@@ -35,11 +35,12 @@ spring:
           - id: catalogservice
             predicates:
               - Path=/catalogservice/api/v1/catalogs/**
-            uri: lb://catalogservice
-          - id: productservice
-            predicates:
               - Path=/catalogservice/api/v1/products/**
             uri: lb://catalogservice
+          # - id: productservice
+          #   predicates:
+          #     - Path=/catalogservice/api/v1/products/**
+          #   uri: lb://catalogservice
           - id: invoiceservice
             predicates:
               - Path=/api/v1/accounts/**
@@ -48,3 +49,9 @@ spring:
             predicates:
               - Path=/api/v1/auth/**
             uri: lb://identityservice
+          - id: searchservice
+            predicates:
+              - Path=//searchservice/api/v1/products/**
+              - Path=//searchservice/api/v1/customers/**
+              - Path=//searchservice/api/v1/catalogs/**
+            uri: lb://searchservice
