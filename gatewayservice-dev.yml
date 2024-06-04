@@ -1,15 +1,6 @@
-server:
-  port: 9002
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9000/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-  url: http://localhost:9000
-
 spring:
+  application:
+    name: gatewayService
   cloud:
     gateway:
       mvc:
@@ -32,26 +23,44 @@ spring:
             predicates:
               - Path=/eureka/**
             uri: ${eureka.url}
-          - id: catalogservice
-            predicates:
-              - Path=/catalogservice/api/v1/catalogs/**
-              - Path=/catalogservice/api/v1/products/**
-            uri: lb://catalogservice
-          # - id: productservice
-          #   predicates:
-          #     - Path=/catalogservice/api/v1/products/**
-          #   uri: lb://catalogservice
-          - id: invoiceservice
-            predicates:
-              - Path=/api/v1/accounts/**
-            uri: lb://invoiceservice
           - id: identityservice
             predicates:
               - Path=/api/v1/auth/**
             uri: lb://identityservice
           - id: searchservice
             predicates:
-              - Path=//searchservice/api/v1/products/**
-              - Path=//searchservice/api/v1/customers/**
-              - Path=//searchservice/api/v1/catalogs/**
-            uri: lb://searchservice
+              - Path=/searchservice/api/v1/customers/**
+              - Path=/searchservice/api/v1/products/**
+              - Path=/searchservice/api/v1/catalogs/**
+            uri: lb://searchService
+          - id: invoiceservice
+            predicates:
+              - Path=/api/v1/invoices/**
+            uri: lb://invoiceservice
+          - id: catalogservice
+            predicates:
+              - Path=/catalogservice/api/v1/catalogs/**
+            uri: lb://catalogservice
+          - id: accountservice
+            predicates:
+              - Path=/api/v1/accounts/**
+            uri: lb://accountservice
+          - id: cartservice
+            predicates:
+              - Path=/api/v1/carts/**
+            uri: lb://cartservice
+          - id: catalogservice
+            predicates:
+              - Path=/catalogservice/api/v1/products/**
+            uri: lb://catalogservice
+
+server:
+  port: 9002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  url: http://localhost:9000
