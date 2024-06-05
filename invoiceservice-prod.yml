@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://crminvoicedbprod:5465/crminvoicedbprod
+    url: jdbc:postgresql://crminvoicedbprod:5432/crminvoicedbprod
     username: admin
     password: 123456
   jpa:
