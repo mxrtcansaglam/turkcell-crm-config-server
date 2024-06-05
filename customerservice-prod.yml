@@ -21,6 +21,6 @@ eureka:
     fetch-registry: true
 kafka:
     producer:
-      bootstrap-servers: localhost:29092
+      bootstrap-servers: kafka:29092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
