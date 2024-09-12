@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://accountdbprod:5432/accountdbprod
+    url: jdbc:postgresql://accountdbprod:5433/accountdbprod
     username: admin
     password: 123456
   jpa:
