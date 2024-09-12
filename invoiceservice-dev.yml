@@ -13,7 +13,7 @@ spring:
   application:
     name: invoiceservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/turkcellcrminvoicedb
+    url: jdbc:postgresql://localhost:5433/turkcellcrminvoicedb
     username: postgres
     password: 12345
   jpa:
