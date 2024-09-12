@@ -13,7 +13,7 @@ spring:
   application:
     name: orderservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/turkcellcrmorderdb
+    url: jdbc:postgresql://localhost:5433/turkcellcrmorderdb
     username: postgres
     password: 12345
   jpa:
