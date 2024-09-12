@@ -13,7 +13,7 @@ spring:
   application:
     name: catalogservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/turkcellcrmcatalogdb
+    url: jdbc:postgresql://localhost:5433/turkcellcrmcatalogdb
     username: postgres
     password: 12345
   jpa:
